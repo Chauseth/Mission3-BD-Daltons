@@ -1,0 +1,15 @@
+{
+  "editor.snippetSuggestions": "top",
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
+  "emmet.preferences": {
+    {
+      "emmet.includeLanguages": {
+         "javascript": "javascriptreact"
+      }
+    }
+  },
+
+  
+}
