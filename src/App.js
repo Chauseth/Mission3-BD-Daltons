@@ -7,10 +7,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    titre: "Mon catalogue",
-  };
-
   render() {
     return (
       <div className="App p-0 text-white">
