@@ -1,9 +1,8 @@
-import { ReactComponent as Menu } from "./svg/view_headline.svg";
-import { ReactComponent as Panier } from "./svg/buy_absolute.svg";
+
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Panier from './Panier';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
@@ -12,23 +11,11 @@ import {useState} from 'react';
 export default (props) => {
 
     const [smShow, setSmShow] = useState(false);
-    const [lgShow, setLgShow] = useState(false);
+    
 
     return (
       <div className="Header">
         <Navbar className = "d-flex justify-content-between ">
-                <Col xs={6} md={3} lg={2}>
-                    <Image src="/img/Logo.png" roundedCircle className="img-fluid"/>
-                </Col>
-                <Col xs={6} md={3} lg={7} className="d-lg-flex justify-content-center">
-                    <h1 className=" d-none d-md-inline-flex d-lg-flex">Les BD's Edouard</h1>
-                </Col>
-                
-                <Col xs={6} md={3} lg={3} className = "d-flex justify-content-around" >
-                    <Navbar.Brand >
-                        <p>Qui suis-je?</p>
-                    </Navbar.Brand>
-       
                     <Button onClick={() => setSmShow(true)} className =" bg-warning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -68,30 +55,8 @@ export default (props) => {
                             </Form>
                         </Modal.Body>
                     </Modal>
-                    <Navbar.Brand href="#home">
-                     <Button onClick={() => setLgShow(true)}>
-                      <Panier/>
-                     </Button>
-                     <Modal
-                        size="lg"
-                        show={lgShow}
-                        onHide={() => setLgShow(false)}
-                        aria-labelledby="example-modal-sizes-title-lg"
-                      >
-                        <Modal.Header closeButton>
-                          <Modal.Title id="example-modal-sizes-title-lg">
-                            Votre Panier 
-                          </Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                          <p> votre panier est vide</p>
-                        </Modal.Body>
-                        <Modal.Footer>
-                          Total :
-                        </Modal.Footer>
-                      </Modal>
-                    </Navbar.Brand>
-                </Col>
+                  <Panier></Panier>
+                
             </Navbar>
         {/* <Menu />
         <img src="" alt=""></img>
