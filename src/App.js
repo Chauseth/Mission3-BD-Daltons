@@ -13,11 +13,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App container-fluid p-0 text-white">
+      <div className="App p-0 text-white">
         <Header />
         <Carroussel />
-        <Filters />
-        <BDS />
+        <div>
+          <Filters />
+          <BDS />
+        </div>
       </div>
     );
   }
