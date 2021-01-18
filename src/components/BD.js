@@ -1,11 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import { FaCartArrowDown } from "react-icons/fa";
 import { series } from "./data/series";
 
-const BD = (props) => {
+const BD = props => {
   const pathBD = "./img/albumsMini/";
 
-  const nameSerie = series.find((serie) => {
+  const nameSerie = series.find(serie => {
     if (serie.id === props.idSerie) {
       return true;
     }
@@ -24,6 +26,11 @@ const BD = (props) => {
         <Card.Title>{props.titre}</Card.Title>
         <Card.Text>{props.prix} €</Card.Text>
       </Card.Body>
+      <Card.Footer>
+        <Button id="buttonBuy">
+          <FaCartArrowDown />{" "}
+        </Button>
+      </Card.Footer>
     </Card>
   );
 };
