@@ -8,7 +8,7 @@ class Caroussel extends Component {
         <Carousel.Item interval={2000}>
           <img
             className="d-block w-100 "
-            src="/img/albums/Astérix-35-Astérix chez les Pictes.jpg"
+            src="/img/albums/Astérix-08-AstérixchezlesBretons.jpg"
             alt=""
           />
           <Carousel.Caption className="text-center p-3">
@@ -19,7 +19,7 @@ class Caroussel extends Component {
         <Carousel.Item interval={2000}>
           <img
             className="d-block w-100"
-            src="/img/albums/Blacksad-01-Quelque part entre les ombres.jpg"
+            src="/img/albums/Blacksad-01-Quelquepartentrelesombres.jpg"
             alt=""
           />
           <Carousel.Caption className="text-center p-3">
@@ -30,7 +30,7 @@ class Caroussel extends Component {
         <Carousel.Item interval={2000}>
           <img
             className="d-block w-100"
-            src="/img/albums/Elfes-01-Le crystal des Elfes bleus.jpg"
+            src="/img/albums/Divers-00b-BilboleHobbit.jpg"
             alt=""
           />
           <Carousel.Caption className="text-center p-3">
