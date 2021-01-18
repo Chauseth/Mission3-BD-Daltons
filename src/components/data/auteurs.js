@@ -1,136 +1,137 @@
-var auteurs = new Map();
-auteurs.set("8", {nom: "Gaudin, Danard"});
-auteurs.set("9", {nom: "Arleston, Hubsch"});
-auteurs.set("10", {nom: "Arleston, Tarquin"});
-auteurs.set("11", {nom: "Arleston, Mourier"});
-auteurs.set("13", {nom: "Franquin, Batem, Colman"});
-auteurs.set("14", {nom: "Tome, Janry"});
-auteurs.set("16", {nom: "Jigounov, Sente"});
-auteurs.set("18", {nom: "Le Tendre, Loisel, Lidwine"});
-auteurs.set("19", {nom: "Zep"});
-auteurs.set("20", {nom: "Herenguel Eric"});
-auteurs.set("21", {nom: "Franquin, Batem, Yann"});
-auteurs.set("22", {nom: "Franquin, Batem, Greg"});
-auteurs.set("23", {nom: "Franquin"});
-auteurs.set("24", {nom: "Reynès, Brémaud, Krings"});
-auteurs.set("25", {nom: "Fournier"});
-auteurs.set("26", {nom: "Franquin, Roba, Greg"});
-auteurs.set("27", {nom: "Franquin, Greg"});
-auteurs.set("28", {nom: "Franquin, Roba"});
-auteurs.set("29", {nom: "Achdé, Erroc"});
-auteurs.set("30", {nom: "Ptiluc"});
-auteurs.set("31", {nom: "Hergé"});
-auteurs.set("32", {nom: "Watch, J.C De la royère"});
-auteurs.set("33", {nom: "Derib, Job"});
-auteurs.set("34", {nom: "Bercovici, Corteggiani"});
-auteurs.set("35", {nom: "Goscinny, Uderzo"});
-auteurs.set("36", {nom: "Rocher, Dufranne"});
-auteurs.set("37", {nom: "Bercovici, Cauvin"});
-auteurs.set("38", {nom: "Jung"});
-auteurs.set("39", {nom: "Loisel"});
-auteurs.set("40", {nom: "Lecureux, Cheret"});
-auteurs.set("41", {nom: "Peyo"});
-auteurs.set("42", {nom: "Morris"});
-auteurs.set("43", {nom: "Morris, Goscinny"});
-auteurs.set("44", {nom: "Morris, Fauche, Léturgie"});
-auteurs.set("45", {nom: "Morris, Achdé, Gerra"});
-auteurs.set("46", {nom: "Diaz canales, Guarnido"});
-auteurs.set("47", {nom: "Franquin, Batem, Dugomier"});
-auteurs.set("48", {nom: "Franquin, Batem, Bourcquardez"});
-auteurs.set("49", {nom: "Franquin, Batem, Kaminka"});
-auteurs.set("50", {nom: "Franquin, Batem"});
-auteurs.set("51", {nom: "Franquin, Batem, Fauche"});
-auteurs.set("52", {nom: "Franquin, Jidéhem, Greg"});
-auteurs.set("53", {nom: "Franquin, Jijé"});
-auteurs.set("54", {nom: "Le Tendre, Loisel, Mallié"});
-auteurs.set("55", {nom: "Le Tendre, Loisel, Aouamri"});
-auteurs.set("56", {nom: "Le Tendre, Loisel"});
-auteurs.set("57", {nom: "Arleston, Dav, Tarquin, Lyse"});
-auteurs.set("58", {nom: "Arnaud, Stambecco"});
-auteurs.set("59", {nom: "Godard, Bollée, Al Coutelis"});
-auteurs.set("60", {nom: "Mangin, Gajic"});
-auteurs.set("61", {nom: "Morvan, Munuera"});
-auteurs.set("62", {nom: "Nic, Cauvin"});
-auteurs.set("63", {nom: "Yoann, Vehlmann"});
-auteurs.set("64", {nom: "Morvan, Yann, Munuera"});
-auteurs.set("65", {nom: "Franquin, Wilbur, Conrad"});
-auteurs.set("66", {nom: "Geluck"});
-auteurs.set("67", {nom: "Astier, Dupré"});
-auteurs.set("68", {nom: "Rosinski, Van Hamme"});
-auteurs.set("69", {nom: "Coyote"});
-auteurs.set("70", {nom: "Bar2"});
-auteurs.set("71", {nom: "Fane"});
-auteurs.set("72", {nom: "Jenfèvre, Perna"});
-auteurs.set("74", {nom: "Arleston, Hubsch, Lebreton"});
-auteurs.set("75", {nom: "Gaudin, Danard, Fuentes"});
-auteurs.set("76", {nom: "Arleston, Tota"});
-auteurs.set("77", {nom: "Francq, Van Hamme"});
-auteurs.set("78", {nom: "Marcello, Maric"});
-auteurs.set("79", {nom: "Cauvin, Hardy"});
-auteurs.set("80", {nom: "De Groot, Turk"});
-auteurs.set("81", {nom: "Rodolphe, Rouge"});
-auteurs.set("82", {nom: "Rodolphe, Allot"});
-auteurs.set("83", {nom: "Tybo, Goupil"});
-auteurs.set("84", {nom: "Tolkien"});
-auteurs.set("85", {nom: "Li, Danverre"});
-auteurs.set("86", {nom: "Kubert"});
-auteurs.set("87", {nom: "Warnant"});
-auteurs.set("88", {nom: "Gazzotti"});
-auteurs.set("89", {nom: "Reynès, Brrémaud, Toulon"});
-auteurs.set("91", {nom: "Servais"});
-auteurs.set("92", {nom: "Font"});
-auteurs.set("93", {nom: "Charlier, Giraud"});
-auteurs.set("94", {nom: "Crisse, Keramidas"});
-auteurs.set("95", {nom: "Arleston, Floch"});
-auteurs.set("96", {nom: "Bourjac, Gadioux"});
-auteurs.set("97", {nom: "Franquin, Jidéhem"});
-auteurs.set("98", {nom: "Franquin, Jidéhem, Delporte"});
-auteurs.set("99", {nom: "Chaland"});
-auteurs.set("100", {nom: "Corbeyran, Guerineau, Merlet"});
-auteurs.set("101", {nom: "Corbeyran, Guerineau"});
-auteurs.set("102", {nom: "Jacobs"});
-auteurs.set("103", {nom: "Vance, Van Hamme"});
-auteurs.set("104", {nom: "Giraud, Van Hamme"});
-auteurs.set("109", {nom: "Aleston, Tota, Lamirand"});
-auteurs.set("108", {nom: "Arleston, Hubsch, MelanÃ¿n"});
-auteurs.set("110", {nom: "Gaudin, Danard, Guillo"});
-auteurs.set("111", {nom: "Delaf, Dubuc"});
-auteurs.set("112", {nom: "Roulot, Martinage"});
-auteurs.set("113", {nom: "Laudec, Cauvin"});
-auteurs.set("114", {nom: "Matt, Groening"});
-auteurs.set("115", {nom: "Midam"});
-auteurs.set("116", {nom: "Beka, Poupard"});
-auteurs.set("117", {nom: "Godi, Fidrou"});
-auteurs.set("118", {nom: "Davis"});
-auteurs.set("122", {nom: "Djian, Legrand, Etien"});
-auteurs.set("127", {nom: "Convard, Falque"});
-auteurs.set("129", {nom: "Sobral"});
-auteurs.set("130", {nom: "Gaby, Dzack"});
-auteurs.set("131", {nom: "Richez, Cazenove, Bloz"});
-auteurs.set("132", {nom: "Clarke, Gilson"});
-auteurs.set("133", {nom: "Roba"});
-auteurs.set("134", {nom: "Roba"});
-auteurs.set("135", {nom: "Domon"});
-auteurs.set("136", {nom: "Gursel"});
-auteurs.set("137", {nom: "Djian, Corbet"});
-auteurs.set("138", {nom: "Miniac"});
-auteurs.set("139", {nom: "Coppée"});
-auteurs.set("140", {nom: "Veys, Toulon, Guenard"});
-auteurs.set("141", {nom: "Midam, Adam"});
-auteurs.set("142", {nom: "Achdé, Pennac"});
-auteurs.set("143", {nom: "Vrancken, Desberg"});
-auteurs.set("144", {nom: "Dubois, Fourquemin"});
-auteurs.set("145", {nom: "Lang, Poinsot"});
-auteurs.set("146", {nom: "Dufaux, Aubin, Schréder"});
-auteurs.set("147", {nom: "Achdé"});
-auteurs.set("148", {nom: "Istin, Duarte, Saito"});
-auteurs.set("149", {nom: "Bar2, Fane"});
-auteurs.set("150", {nom: "Funcken"});
-auteurs.set("151", {nom: "Luz"});
-auteurs.set("153", {nom: "Nerac, Djian, Teron, Kangaro"});
-auteurs.set("154", {nom: "Desberg, Lalor"});
-auteurs.set("155", {nom: "Nob"});
-auteurs.set("156", {nom: "Barjam"});
-auteurs.set("157", {nom: "Francq, Giaconetti"});
-auteurs.set("158", {nom: "Le Tendre, Loisel, Etien"});
-auteurs.set("159", {nom: "60 auteurs"});
+export const auteurs = [
+  { id: "8", nom: "Gaudin, Danard" },
+  { id: "9", nom: "Arleston, Hubsch" },
+  { id: "10", nom: "Arleston, Tarquin" },
+  { id: "11", nom: "Arleston, Mourier" },
+  { id: "13", nom: "Franquin, Batem, Colman" },
+  { id: "14", nom: "Tome, Janry" },
+  { id: "16", nom: "Jigounov, Sente" },
+  { id: "18", nom: "Le Tendre, Loisel, Lidwine" },
+  { id: "19", nom: "Zep" },
+  { id: "20", nom: "Herenguel Eric" },
+  { id: "21", nom: "Franquin, Batem, Yann" },
+  { id: "22", nom: "Franquin, Batem, Greg" },
+  { id: "23", nom: "Franquin" },
+  { id: "24", nom: "Reynès, Brémaud, Krings" },
+  { id: "25", nom: "Fournier" },
+  { id: "26", nom: "Franquin, Roba, Greg" },
+  { id: "27", nom: "Franquin, Greg" },
+  { id: "28", nom: "Franquin, Roba" },
+  { id: "29", nom: "Achdé, Erroc" },
+  { id: "30", nom: "Ptiluc" },
+  { id: "31", nom: "Hergé" },
+  { id: "32", nom: "Watch, J.C De la royère" },
+  { id: "33", nom: "Derib, Job" },
+  { id: "34", nom: "Bercovici, Corteggiani" },
+  { id: "35", nom: "Goscinny, Uderzo" },
+  { id: "36", nom: "Rocher, Dufranne" },
+  { id: "37", nom: "Bercovici, Cauvin" },
+  { id: "38", nom: "Jung" },
+  { id: "39", nom: "Loisel" },
+  { id: "40", nom: "Lecureux, Cheret" },
+  { id: "41", nom: "Peyo" },
+  { id: "42", nom: "Morris" },
+  { id: "43", nom: "Morris, Goscinny" },
+  { id: "44", nom: "Morris, Fauche, Léturgie" },
+  { id: "45", nom: "Morris, Achdé, Gerra" },
+  { id: "46", nom: "Diaz canales, Guarnido" },
+  { id: "47", nom: "Franquin, Batem, Dugomier" },
+  { id: "48", nom: "Franquin, Batem, Bourcquardez" },
+  { id: "49", nom: "Franquin, Batem, Kaminka" },
+  { id: "50", nom: "Franquin, Batem" },
+  { id: "51", nom: "Franquin, Batem, Fauche" },
+  { id: "52", nom: "Franquin, Jidéhem, Greg" },
+  { id: "53", nom: "Franquin, Jijé" },
+  { id: "54", nom: "Le Tendre, Loisel, Mallié" },
+  { id: "55", nom: "Le Tendre, Loisel, Aouamri" },
+  { id: "56", nom: "Le Tendre, Loisel" },
+  { id: "57", nom: "Arleston, Dav, Tarquin, Lyse" },
+  { id: "58", nom: "Arnaud, Stambecco" },
+  { id: "59", nom: "Godard, Bollée, Al Coutelis" },
+  { id: "60", nom: "Mangin, Gajic" },
+  { id: "61", nom: "Morvan, Munuera" },
+  { id: "62", nom: "Nic, Cauvin" },
+  { id: "63", nom: "Yoann, Vehlmann" },
+  { id: "64", nom: "Morvan, Yann, Munuera" },
+  { id: "65", nom: "Franquin, Wilbur, Conrad" },
+  { id: "66", nom: "Geluck" },
+  { id: "67", nom: "Astier, Dupré" },
+  { id: "68", nom: "Rosinski, Van Hamme" },
+  { id: "69", nom: "Coyote" },
+  { id: "70", nom: "Bar2" },
+  { id: "71", nom: "Fane" },
+  { id: "72", nom: "Jenfèvre, Perna" },
+  { id: "74", nom: "Arleston, Hubsch, Lebreton" },
+  { id: "75", nom: "Gaudin, Danard, Fuentes" },
+  { id: "76", nom: "Arleston, Tota" },
+  { id: "77", nom: "Francq, Van Hamme" },
+  { id: "78", nom: "Marcello, Maric" },
+  { id: "79", nom: "Cauvin, Hardy" },
+  { id: "80", nom: "De Groot, Turk" },
+  { id: "81", nom: "Rodolphe, Rouge" },
+  { id: "82", nom: "Rodolphe, Allot" },
+  { id: "83", nom: "Tybo, Goupil" },
+  { id: "84", nom: "Tolkien" },
+  { id: "85", nom: "Li, Danverre" },
+  { id: "86", nom: "Kubert" },
+  { id: "87", nom: "Warnant" },
+  { id: "88", nom: "Gazzotti" },
+  { id: "89", nom: "Reynès, Brrémaud, Toulon" },
+  { id: "91", nom: "Servais" },
+  { id: "92", nom: "Font" },
+  { id: "93", nom: "Charlier, Giraud" },
+  { id: "94", nom: "Crisse, Keramidas" },
+  { id: "95", nom: "Arleston, Floch" },
+  { id: "96", nom: "Bourjac, Gadioux" },
+  { id: "97", nom: "Franquin, Jidéhem" },
+  { id: "98", nom: "Franquin, Jidéhem, Delporte" },
+  { id: "99", nom: "Chaland" },
+  { id: "100", nom: "Corbeyran, Guerineau, Merlet" },
+  { id: "101", nom: "Corbeyran, Guerineau" },
+  { id: "102", nom: "Jacobs" },
+  { id: "103", nom: "Vance, Van Hamme" },
+  { id: "104", nom: "Giraud, Van Hamme" },
+  { id: "109", nom: "Aleston, Tota, Lamirand" },
+  { id: "108", nom: "Arleston, Hubsch, MelanÃ¿n" },
+  { id: "110", nom: "Gaudin, Danard, Guillo" },
+  { id: "111", nom: "Delaf, Dubuc" },
+  { id: "112", nom: "Roulot, Martinage" },
+  { id: "113", nom: "Laudec, Cauvin" },
+  { id: "114", nom: "Matt, Groening" },
+  { id: "115", nom: "Midam" },
+  { id: "116", nom: "Beka, Poupard" },
+  { id: "117", nom: "Godi, Fidrou" },
+  { id: "118", nom: "Davis" },
+  { id: "122", nom: "Djian, Legrand, Etien" },
+  { id: "127", nom: "Convard, Falque" },
+  { id: "129", nom: "Sobral" },
+  { id: "130", nom: "Gaby, Dzack" },
+  { id: "131", nom: "Richez, Cazenove, Bloz" },
+  { id: "132", nom: "Clarke, Gilson" },
+  { id: "133", nom: "Roba" },
+  { id: "134", nom: "Roba" },
+  { id: "135", nom: "Domon" },
+  { id: "136", nom: "Gursel" },
+  { id: "137", nom: "Djian, Corbet" },
+  { id: "138", nom: "Miniac" },
+  { id: "139", nom: "Coppée" },
+  { id: "140", nom: "Veys, Toulon, Guenard" },
+  { id: "141", nom: "Midam, Adam" },
+  { id: "142", nom: "Achdé, Pennac" },
+  { id: "143", nom: "Vrancken, Desberg" },
+  { id: "144", nom: "Dubois, Fourquemin" },
+  { id: "145", nom: "Lang, Poinsot" },
+  { id: "146", nom: "Dufaux, Aubin, Schréder" },
+  { id: "147", nom: "Achdé" },
+  { id: "148", nom: "Istin, Duarte, Saito" },
+  { id: "149", nom: "Bar2, Fane" },
+  { id: "150", nom: "Funcken" },
+  { id: "151", nom: "Luz" },
+  { id: "153", nom: "Nerac, Djian, Teron, Kangaro" },
+  { id: "154", nom: "Desberg, Lalor" },
+  { id: "155", nom: "Nob" },
+  { id: "156", nom: "Barjam" },
+  { id: "157", nom: "Francq, Giaconetti" },
+  { id: "158", nom: "Le Tendre, Loisel, Etien" },
+  { id: "159", nom: "60 auteurs" },
+];

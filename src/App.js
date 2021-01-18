@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
-import Header from './components/Header';
-import Carroussel from './components/Caroussel'
-import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
-
-
-
+import React, { Component } from "react";
+import Header from "./components/Header";
+import Carroussel from "./components/Caroussel";
+import Filters from "./components/Filters";
+import BDS from "./components/BDs";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
 
 class App extends Component {
-
-    state = {
-    titre : "Mon catalogue"
-  }
+  state = {
+    titre: "Mon catalogue",
+  };
 
   render() {
     return (
-      <div className="App container-fluid p-0">
+      <div className="App container-fluid p-0 text-white">
         <Header />
         <Carroussel />
+        <Filters />
+        <BDS />
       </div>
     );
   }
-  
 }
 
 export default App;
