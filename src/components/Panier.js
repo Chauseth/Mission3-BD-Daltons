@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Card from "react-bootstrap/Card";
+import Table from "react-bootstrap/Table";
 
 import { FaCartArrowDown } from "react-icons/fa";
 import {useState} from 'react';
@@ -125,7 +126,40 @@ export default (props) => {
 
             {pdtAjoute.length !== 0 && (
                 <>
-               
+               <Table striped bordered hover>
+               <thead>
+                    <tr>
+                        <th>Produits</th>
+                        <th>Nom de produit</th>
+                        <th>prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/img/albumsMini/Astérix-08-AstérixchezlesBretons.jpg" /></td>
+                        <td> titre </td>
+                        <td>prix  €</td>
+                    </tr>
+                </tbody>
+                <tfooter>
+                    <tr>
+                        <td colSpan="2">Total HT</td>
+                        <td colSpan="2">{prixPdt.toFixed(2)} €</td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">TVA</td>
+                        <td colSpan="2">{taxAjoute.toFixed(2)} €</td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">Frais de livraison</td>
+                        <td colSpan="2"> {coutLivraison.toFixed(2)} €</td>
+                    </tr>
+                    <tr>
+                        <td colSpan="2">Total TTC</td>
+                        <td colSpan="2"> {prixTotal.toFixed(2)} €</td>
+                    </tr>
+                </tfooter>
+               </Table>
                 <div className="row">
                   <div >prix HT</div>
                   <div className=" text-right">{prixPdt.toFixed(2)} €</div>

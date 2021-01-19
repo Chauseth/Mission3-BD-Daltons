@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App p-0 text-white">
-        <Header />
+        <Header  />
         <Carroussel />
         <div>
           <Search />

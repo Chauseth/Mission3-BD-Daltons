@@ -7,9 +7,11 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import {useState} from 'react';
+import PanierAchat from './PanierAchat';
 
 export default (props) => {
-    const { pdtAjoute, onAdd, onRemove } = props;
+
+  const { pdtAjoute, onAdd, onRemove } = props;
     const [smShow, setSmShow] = useState(false);
     return (
       <div className="Header">
@@ -52,18 +54,14 @@ export default (props) => {
                    </Form>
                </Modal.Body>
            </Modal>
-                  <Panier 
+                  <Panier
                   pdtAjoute = {pdtAjoute}
                   onAdd= {onAdd} 
                   onRemove = {onRemove}
                   />
                 
             </Navbar>
-        {/* <Menu />
-        <img src="" alt=""></img>
-        <h1 className="d-none">Le site de BD</h1>
-
-        <Panier /> */}
+       
       </div>
     );
   }
