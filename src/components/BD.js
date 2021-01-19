@@ -4,10 +4,10 @@ import Button from "react-bootstrap/Button";
 import { FaCartArrowDown } from "react-icons/fa";
 import { series } from "./data/series";
 
-const BD = props => {
+const BD = (props) => {
   const pathBD = "./img/albumsMini/";
 
-  const nameSerie = series.find(serie => {
+  const nameSerie = series.find((serie) => {
     if (serie.id === props.idSerie) {
       return true;
     }
@@ -18,7 +18,6 @@ const BD = props => {
   const cleanSerie = nameSerie.nom.replace(/'|!|\?|\.|"|:|\$|\s/g, "");
   const cleanPath =
     pathBD + cleanSerie + "-" + props.numero + "-" + cleanName + ".jpg";
-  console.log(cleanPath);
   return (
     <Card className="mt-5">
       <Card.Img variant="top" src={cleanPath} />
