@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Carroussel from "./components/Caroussel";
 import Filters from "./components/Filters";
 import Search from "./components/Search";
-import BDS from "./components/BDs";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
