@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import {useState} from 'react';
 
 export default (props) => {
-
+    const { pdtAjoute, onAdd, onRemove } = props;
     const [smShow, setSmShow] = useState(false);
     return (
       <div className="Header">
@@ -52,7 +52,11 @@ export default (props) => {
                    </Form>
                </Modal.Body>
            </Modal>
-                  <Panier></Panier>
+                  <Panier 
+                  pdtAjoute = {pdtAjoute}
+                  onAdd= {onAdd} 
+                  onRemove = {onRemove}
+                  />
                 
             </Navbar>
         {/* <Menu />
