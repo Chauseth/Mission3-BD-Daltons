@@ -4,59 +4,36 @@ import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
+import { albums } from "./data/albums";
 
 import { FaCartArrowDown } from "react-icons/fa";
 import {useState} from 'react';
 export default (props) => {
-    const albumsBd = [
-        {
-          titre: "Croc vert",
-          numero: "23",
-          idSerie: "6",
-          idAuteur: "13",
-          prix: "24.50"
-        },
-        {
-          titre: "Machine qui rêve",
-          numero: "46",
-          idSerie: "2",
-          idAuteur: "14",
-          prix: "23.50"
-        },
-        {
-          titre: "La guerre des gloutons (II)",
-          numero: "13",
-          idSerie: "16",
-          idAuteur: "11",
-          prix: "14.50"
-        }]
-    const [pdtAjoute, setPdtAjoute] = useState([]);
-    const onAdd = (pdt) => {
-        const exist = pdtAjoute.find((x) => x.id === pdt.id);
-        if (exist) {
-          setPdtAjoute(
-            pdtAjoute.map((x) =>
-              x.id === pdt.id ? { ...exist, qty: exist.qty + 1 } : x
-            )
-          );
-        } else {
-          setPdtAjoute([...pdtAjoute, { ...pdt, qty: 1 }]);
-        }
-      };
-      const onRemove = (pdt) => {
-        const exist = pdtAjoute.find((x) => x.id === pdt.id);
-        if (exist.qty === 1) {
-          setPdtAjoute(pdtAjoute.filter((x) => x.id !== pdt.id));
-        } else {
-          setPdtAjoute(
-            pdtAjoute.map((x) =>
-              x.id === pdt.id ? { ...exist, qty: exist.qty - 1 } : x
-            )
-          );
-        }
-      }
-
     
+    // const albumsBd = [
+    //     {
+    //       titre: "Croc vert",
+    //       numero: "23",
+    //       idSerie: "6",
+    //       idAuteur: "13",
+    //       prix: "24.50"
+    //     },
+    //     {
+    //       titre: "Machine qui rêve",
+    //       numero: "46",
+    //       idSerie: "2",
+    //       idAuteur: "14",
+    //       prix: "23.50"
+    //     },
+    //     {
+    //       titre: "La guerre des gloutons (II)",
+    //       numero: "13",
+    //       idSerie: "16",
+    //       idAuteur: "11",
+    //       prix: "14.50"
+    //     }]
+    const { pdtAjoute, onAdd, onRemove } = props;
+     console.log(onAdd)
     const prixPdt= pdtAjoute.reduce((a, c) =>  a + c.qty * c.prix, 0 );
     const taxAjoute = prixPdt * 0.19;
     const coutLivraison = prixPdt > 50 ? 0 :  5;
@@ -81,7 +58,7 @@ export default (props) => {
         </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <div>
+            {/* <div>
                  <div className="BDS d-flex flex-wrap justify-content-around">
                     {albumsBd.map((pdt) => (
                     <div
@@ -107,18 +84,23 @@ export default (props) => {
                     </div>
                     ))}
                 </div>
+            </div> */}
+            <div>
+                {pdtAjoute.length === 0 && <div> votre panier est vide</div>}
             </div>
-            {pdtAjoute.length === 0 && <div> votre panier est vide</div>}
-            {pdtAjoute.map((pdt) => (
-                <div key={pdt.id} className="row">
-                    <div >{pdt.titre}</div>
-                    <div >
-                        <button  onClick={() => onRemove(pdt)}>
+            {pdtAjoute.map((item) => (
+                <div key={item.id} className="row">
+                    <div className="col-2">{item.titre}</div>
+                    <div className="col-2">
+                        <button  onClick={() => onRemove(item)}>
                             -
                         </button>{' '}
-                        <button onClick={() => onAdd(pdt)}>
+                        <button onClick={() => onAdd(item)}>
                             +
                         </button>
+                    </div>
+                    <div className="col-2 text-right" >
+                        {item.qty} x {item.prix.toFixed(2)} €
                     </div>
                    
               </div>
@@ -137,8 +119,8 @@ export default (props) => {
                 <tbody>
                     <tr>
                         <td><img src="/img/albumsMini/Astérix-08-AstérixchezlesBretons.jpg" /></td>
-                        <td> titre </td>
-                        <td>prix  €</td>
+                        <td>{props.titre}</td>
+                        <td>{props.prix}  €</td>
                     </tr>
                 </tbody>
                 <tfooter>
@@ -160,7 +142,7 @@ export default (props) => {
                     </tr>
                 </tfooter>
                </Table>
-                <div className="row">
+                {/* <div className="row">
                   <div >prix HT</div>
                   <div className=" text-right">{prixPdt.toFixed(2)} €</div>
                 </div>
@@ -182,7 +164,7 @@ export default (props) => {
                   <div className="col-1 text-right">
                     <strong>{prixTotal.toFixed(2)} €</strong>
                   </div>
-                </div>
+                </div> */}
                 
                 
               </>

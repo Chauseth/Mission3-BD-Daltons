@@ -5,9 +5,10 @@ import Button from "react-bootstrap/Button";
 import { FaCartArrowDown } from "react-icons/fa";
 import { series } from "./data/series";
 
+
 const BD = (props) => {
   const pathBD = "./img/albumsMini/";
-  const {pdt, onAdd} = props;
+  const {onAdd} = props;
   const nameSerie = series.find((serie) => {
     if (serie.id === props.idSerie) {
       return true;
@@ -27,7 +28,7 @@ const BD = (props) => {
         <Card.Text>{props.prix} €</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Button id="buttonBuy" onClick={() => onAdd(pdt)} >
+        <Button id="buttonBuy" onClick={() => onAdd(props)} >
           <FaCartArrowDown />{" "}
         </Button>
       </Card.Footer>
