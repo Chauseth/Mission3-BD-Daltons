@@ -13,8 +13,12 @@ const Filters = (props) => {
     for (let indexAlbums = 0; indexAlbums < albums.length; indexAlbums++) {
       for (let indexSeries = 0; indexSeries < series.length; indexSeries++) {
         if (
-          albums[indexAlbums].titre.includes(props.input) ||
-          (series[indexSeries].nom.includes(props.input) &&
+          albums[indexAlbums].titre
+            .toLowerCase()
+            .includes(props.input.toLowerCase()) ||
+          (series[indexSeries].nom
+            .toLocaleLowerCase()
+            .includes(props.input.toLowerCase()) &&
             albums[indexAlbums].idSerie === series[indexSeries].id)
         ) {
           if (
@@ -59,7 +63,6 @@ const Filters = (props) => {
 
   return (
     <div className="d-flex flex-wrap justify-content-around">
-       
       {resultFilters.map((id) => (
         <BD
         
