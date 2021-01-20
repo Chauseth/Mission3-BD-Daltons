@@ -61,7 +61,6 @@ const Filters = (props) => {
 
   return (
     <div className="d-flex flex-wrap justify-content-around">
-       
       {resultFilters.map((id) => (
         <BD
           titre={id.titre}
