@@ -28,8 +28,8 @@ const BD = (props) => {
         <Card.Text>{props.prix} €</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Button id="buttonBuy" onClick={() => onAdd(props)} >
-          <FaCartArrowDown />{" "}
+        <Button id="buttonBuy" >
+          <FaCartArrowDown  />{" "}
         </Button>
       </Card.Footer>
     </Card>

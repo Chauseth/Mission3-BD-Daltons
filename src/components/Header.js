@@ -2,45 +2,15 @@
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import Col from 'react-bootstrap/Col';
-import Panier from './Panier';
+import BouttonPanier from './BouttonPanier';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import {useState} from 'react';
-import PanierAchat from './PanierAchat';
 
 export default (props) => {
-
   const [smShow, setSmShow] = useState(false);
-  const [pdtAjoute, setPdtAjoute] = useState([]);
-
-  const onAdd = (pdt) => {
-    const exist = pdtAjoute.find((x) => x.id === pdt.id);
-
-    if (exist) {
-      setPdtAjoute(
-        pdtAjoute.map((x) => x.id === pdt.id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      );
-    } else {
-      setPdtAjoute([...pdtAjoute, { ...pdt, qty: 1 }]);
-    }
-  };
-
-  const onRemove = (pdt) => {
-    const exist = pdtAjoute.find((x) => x.id === pdt.id);
-    
-    if (exist.qty === 1) {
-      setPdtAjoute(pdtAjoute.filter((x) => x.id !== pdt.id));
-    } else {
-      setPdtAjoute(
-        pdtAjoute.map((x) =>
-          x.id === pdt.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    }
-  }
-    
+  
     return (
       <div className="Header">
         <Navbar className = "d-flex justify-content-between ">
@@ -82,12 +52,7 @@ export default (props) => {
                    </Form>
                </Modal.Body>
            </Modal>
-                  <Panier
-                  pdtAjoute = {pdtAjoute}
-                  onAdd= {onAdd} 
-                  onRemove = {onRemove}
-                  />
-                
+                  <BouttonPanier/>
             </Navbar>
        
       </div>

@@ -8,10 +8,10 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    
+    console.clear();
     return (
       <div className="App p-0 text-white">
-        <Header  />
+        <Header/>
         <Carroussel />
         <div>
           <Search />
