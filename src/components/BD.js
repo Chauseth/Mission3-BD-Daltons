@@ -3,11 +3,13 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { FaCartArrowDown } from "react-icons/fa";
 import { series } from "./data/series";
+import Modale from "./Modale";
+import VignetteModale from "./VignetteModale";
 
-const BD = (props) => {
+const BD = props => {
   const pathBD = "./img/albumsMini/";
 
-  const nameSerie = series.find((serie) => {
+  const nameSerie = series.find(serie => {
     if (serie.id === props.idSerie) {
       return true;
     }
@@ -21,11 +23,14 @@ const BD = (props) => {
   return (
     <Card className="mt-5">
       <Card.Img variant="top" src={cleanPath} />
-      <Card.Body className="bg-dark">
-        <Card.Title>{props.titre}</Card.Title>
-        <Card.Text>{props.prix} €</Card.Text>
+      <Card.Body
+        id="card-body"
+        className="bg-dark d-flex flex-column  align-items-md-center"
+      >
+        <Card.Title id="set-title">{props.titre}</Card.Title>
+        <Card.Text id="set-text">{props.prix} €</Card.Text>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer id="set-carFooter">
         <Button id="buttonBuy">
           <FaCartArrowDown />{" "}
         </Button>
