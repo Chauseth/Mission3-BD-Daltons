@@ -1,4 +1,4 @@
-.App {
+body {
   background-color: #293133;
 }
 
@@ -168,8 +168,22 @@ form input {
   width: 55%;
   text-align: justify;
 }
+
+.qtyInput {
+  max-width: 100px;
+  text-align: center;
+}
+
+.tdPanier {
+  border: none !important;
+  align-items: center;
+}
+.tdImage {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
-  .loremText{
+  .loremText {
     width: 95%;
   }
   .modalBody img {

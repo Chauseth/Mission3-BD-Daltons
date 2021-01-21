@@ -1,3 +1,7 @@
+/* Composant gérant l'affichage du Header,
+ avec le bouton du Panier et ses composants
+*/
+
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
 import Col from "react-bootstrap/Col";

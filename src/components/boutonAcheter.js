@@ -1,8 +1,9 @@
-import React from "react";
-import { useState } from "react";
-import { tableaupanier } from "./TableauPanier";
-import Panier from "./Panier";
+/* Composant gérant l'action du bouton acheter présent sur les cartes et sur les descriptions des BD */
 
+import React from "react";
+import { tableaupanier } from "./TableauPanier";
+
+//Ajout des données de l'album dans le tableau
 const BoutonAcheter = (props) => {
   const buySomething = (album) => {
     tableaupanier.push(album);

@@ -1,3 +1,8 @@
+/* Composant gérant le formulaire 
+et l'affichage des BD 
+via le composant Filters
+ */
+
 import React from "react";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
