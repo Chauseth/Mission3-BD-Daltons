@@ -117,6 +117,9 @@ form input {
   width: 100%;
 }
 
+.focus {
+  transition: all 0.3s ease-in-out;
+}
 .focus:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }

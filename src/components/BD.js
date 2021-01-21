@@ -6,10 +6,11 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Table from "react-bootstrap/Table";
 
-const BD = (props) => {
+const BD = props => {
   const pathBD = "./img/albumsMini/";
+  const pathFullBD = "./img/albums/";
 
-  const nameSerie = series.find((serie) => {
+  const nameSerie = series.find(serie => {
     if (serie.id === props.idSerie) {
       return true;
     }
@@ -20,8 +21,8 @@ const BD = (props) => {
   const cleanSerie = nameSerie.nom.replace(/'|!|\?|\.|"|:|\$|\s/g, "");
   const cleanPath =
     pathBD + cleanSerie + "-" + props.numero + "-" + cleanName + ".jpg";
-
-  // Gestion modale BD
+  const cleanFullPath =
+    pathFullBD + cleanSerie + "-" + props.numero + "-" + cleanName + ".jpg";
 
   const [lgShow, setLgShow] = useState(false);
   return (
@@ -40,7 +41,7 @@ const BD = (props) => {
           <BoutonAcheter album={props} className="boutonPanier" />
         </Card.Footer>
       </Card>
-
+      {/* Gestion affichage modale img BD */}
       <Modal
         size="lg"
         show={lgShow}
@@ -49,37 +50,11 @@ const BD = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-lg">
-            Votre Panier
+            {props.titre}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Produits</th>
-                <th>Nom de produit</th>
-                <th>prix</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colSpan="2">Total HT</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">TVA</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Frais de livraison</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Total TTC</td>
-                <td> €</td>
-              </tr>
-            </tbody>
-          </Table>
+          <img src={cleanFullPath} />
         </Modal.Body>
         <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer>
       </Modal>
