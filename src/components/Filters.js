@@ -5,9 +5,6 @@ import { auteurs } from "./data/auteurs";
 import BD from "./BD";
 
 const Filters = (props) => {
-  
-  console.log(props) 
-
   const resultFilters = [];
   if (props.input.match(/\S+/)) {
     for (let indexAlbums = 0; indexAlbums < albums.length; indexAlbums++) {
@@ -59,18 +56,16 @@ const Filters = (props) => {
     }
   }
 
-  
-
   return (
     <div className="d-flex flex-wrap justify-content-around">
       {resultFilters.map((id) => (
         <BD
-        
           titre={id.titre}
           numero={id.numero}
           idSerie={id.idSerie}
           idAuteur={id.idAuteur}
           prix={id.prix}
+          key={Math.random()}
         />
       ))}
     </div>
