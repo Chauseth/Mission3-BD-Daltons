@@ -8,6 +8,7 @@ import Table from "react-bootstrap/Table";
 
 const BD = (props) => {
   const pathBD = "./img/albumsMini/";
+  const pathFullBD = "./img/albums/";
 
   const nameSerie = series.find((serie) => {
     if (serie.id === props.idSerie) {
@@ -20,8 +21,8 @@ const BD = (props) => {
   const cleanSerie = nameSerie.nom.replace(/'|!|\?|\.|"|:|\$|\s/g, "");
   const cleanPath =
     pathBD + cleanSerie + "-" + props.numero + "-" + cleanName + ".jpg";
-
-  // Gestion modale BD
+  const cleanFullPath =
+    pathFullBD + cleanSerie + "-" + props.numero + "-" + cleanName + ".jpg";
 
   const [lgShow, setLgShow] = useState(false);
   return (
@@ -40,47 +41,34 @@ const BD = (props) => {
           <BoutonAcheter album={props} className="boutonPanier" />
         </Card.Footer>
       </Card>
-
+      {/* Gestion affichage modale img BD */}
       <Modal
         size="lg"
         show={lgShow}
         onHide={() => setLgShow(false)}
-        aria-labelledby="example-modal-sizes-title-lg">
+        aria-labelledby="example-modal-sizes-title-lg"
+        className="BodyModal">
         <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            Votre Panier
-          </Modal.Title>
+          <Modal.Title id="example-modal-sizes-title-lg"></Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Produits</th>
-                <th>Nom de produit</th>
-                <th>prix</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colSpan="2">Total HT</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">TVA</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Frais de livraison</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Total TTC</td>
-                <td> €</td>
-              </tr>
-            </tbody>
-          </Table>
+        <Modal.Body className="modalBody">
+          <h1>{props.titre}</h1>
+          <img src={cleanFullPath} />
+          <p className="loremText">
+            lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            eu est urna. Duis a massa quam. Donec sed laoreet ante, at blandit
+            purus. Fusce sit amet elit nisl. Etiam sed purus mattis, molestie
+            augue non, euismod libero. Curabitur tempus nisl lacus, in tincidunt
+            lorem ultricies ut. Nullam vitae arcu in arcu lacinia vehicula ac at
+            risus.{" "}
+          </p>
+          <h5>Ajouter au panier</h5>
+          <div className="d-flex">
+            <h3>{props.prix} €</h3>
+            <BoutonAcheter album={props} className="boutonPanier" />
+          </div>
         </Modal.Body>
-        <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer>
+        {/* <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer> */}
       </Modal>
     </>
   );

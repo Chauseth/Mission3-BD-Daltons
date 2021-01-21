@@ -7,14 +7,12 @@ import { useState } from "react";
 import { tableaupanier } from "./TableauPanier";
 
 export default (props) => {
+  
   const [count, setCount] = useState(0);
-  const { pdtAjoute, onAdd, onRemove } = props;
-  const prixPdt = pdtAjoute.reduce((a, c) => a + c.qty * c.prix, 0);
-  const taxAjoute = prixPdt * 0.19;
-  const coutLivraison = prixPdt > 50 ? 0 : 5;
-  const prixTotal = prixPdt + taxAjoute + coutLivraison;
-
   const [lgShow, setLgShow] = useState(false);
+
+  
+  
   return (
     <Navbar.Brand href="#home">
       <Button onClick={() => setLgShow(true)}>Panier</Button>
@@ -29,6 +27,9 @@ export default (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        {tableaupanier.length === 0 && <div> votre panier est vide</div>}
+       
+        
           <Table striped bordered hover>
             <thead>
               <tr>
@@ -38,10 +39,14 @@ export default (props) => {
               </tr>
             </thead>
             <tbody>
+            
+            
               {tableaupanier.map((index) => {
                 console.log(index);
                 return (
                   <ItemPanier
+                  
+                 
                     titre={index.titre}
                     prix={index.prix}
                     idSerie={index.idSerie}
@@ -50,23 +55,26 @@ export default (props) => {
                   />
                 );
               })}
-              <tr>
-                <td colSpan="2">Total HT</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">TVA</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Frais de livraison</td>
-                <td> €</td>
-              </tr>
-              <tr>
-                <td colSpan="2">Total TTC</td>
-                <td> €</td>
-              </tr>
-            </tbody>
+              
+     <tr>
+     <td colSpan="2">Total HT</td>
+     
+   </tr>
+   <tr>
+     <td colSpan="2">TVA</td>
+     <td> €</td>
+   </tr>
+   <tr>
+     <td colSpan="2">Frais de livraison</td>
+     <td> €</td>
+   </tr>
+   <tr>
+     <td colSpan="2">Total TTC</td>
+     <td> €</td>
+   </tr>
+   </tbody>
+              
+            
           </Table>
         </Modal.Body>
         <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer>
