@@ -7,10 +7,11 @@ const BoutonAcheter = (props) => {
   const buySomething = (album) => {
     tableaupanier.push(album);
   };
+  
 
   return (
     <div>
-      <button onClick={() => buySomething(props.album)}>Acheter</button>
+      <button onClick={() => buySomething(props.album)} >Acheter</button>
     </div>
   );
 };
