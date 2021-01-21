@@ -37,10 +37,6 @@ img {
 
 .formclass input {
   min-width: 300px;
-  height: 40px;
-  margin-top: 5%;
-  border-radius: 30%;
-  box-shadow: 5px 4px 5px rgb(2, 2, 2);
 }
 
 .BDS {
@@ -48,74 +44,63 @@ img {
 }
 
 .card {
-  width: 200px;
-  background-color: rgb(184, 183, 190);
+  width: 145px;
   border-radius: 10px;
   margin: 0 1.5%;
-  box-shadow: 5px 4px 5px rgb(2, 2, 2);
+  border: none;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
 }
-.card:hover {
-  transition: width 250px 1s;
+
+.card-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 135px;
+  font-size: 1.2em;
+  font-weight: 600;
 }
+
 .card-img-top {
   height: 200px;
   max-width: 145px;
-  /* border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 5px 4px 5px rgb(2, 2, 2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   object-fit: fill;
 }
-/* set card-body */
+
 .card-body {
-  /* border-bottom-left-radius: 10px;
+  background: rgba(0, 0, 0, 0.884);
+  /*   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; */
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#card-body {
-  height: 140px;
 }
 
-/* set-title (title) */
-#set-title {
-  text-align: center;
-  width: 100%;
-  font-size: 1rem;
-}
-/* set-text (price) */
-#set-text {
-  text-align: center;
-  width: 100%;
-  font-size: 1rem;
-  position: absolute;
-  top: 70%;
-}
-/* set card footer  */
-/* set color card footer  */
-#set-carFooter {
-  background-color: #202b2e;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-/* set button buy in footer (Daniel) */
+/* set button buy (Daniel) */
 #buttonBuy {
   background-color: #f3d617;
   color: black;
-  font-size: 25px;
+  font-size: 20px;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  border-color: #202b2e;
   border-radius: 10px;
+  justify-self: end;
 }
-/* modal on card */
-.wrapper {
-  height: 500px;
-  width: 100%;
-  background-color: red;
+
+.card-footer {
+  background: rgba(0, 0, 0, 0.884);
+  border-top: none;
+  border-bottom-left-radius: 9px !important;
+  border-bottom-right-radius: 9px !important;
 }
-#bt-modale {
-  border-radius: 10px;
+
+form input {
+  border-radius: 20px;
+  padding: 10px;
+  border: 3px solid black;
+  outline: none;
+}
+
+.carousel-caption {
+  margin-left: 20%;
+  margin-right: 20%;
 }

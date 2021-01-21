@@ -1,63 +1,97 @@
+import Form from "react-bootstrap/Form";
+import Navbar from "react-bootstrap/Navbar";
+import Col from "react-bootstrap/Col";
+import Panier from "./Panier";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import { useState } from "react";
 
-import Form from 'react-bootstrap/Form';
-import Navbar from 'react-bootstrap/Navbar';
-import Col from 'react-bootstrap/Col';
-import BouttonPanier from './BouttonPanier';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import {useState} from 'react';
-
-export default (props) => {
+const Header = (props) => {
   const [smShow, setSmShow] = useState(false);
-  
-    return (
-      <div className="Header">
-        <Navbar className = "d-flex justify-content-between ">
-           <Button onClick={() => setSmShow(true)} className =" bg-warning">
-               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-               </svg>
-           </Button>
-           <Modal
-           size="sm"
-           show={smShow}
-           onHide={() => setSmShow(false)}
-           aria-labelledby="example-modal-sizes-title-sm"
-           >
-               <Modal.Header closeButton>
-                   <Modal.Title id="example-modal-sizes-title-sm">
-                   login
-                   </Modal.Title>
-               </Modal.Header>
-               <Modal.Body>
-                   <Form>
-                       <Form.Group as={Row} controlId="formPlaintextEmail">
-                       <Form.Label column sm="3">
-                           Email
-                       </Form.Label>
-                       <Col sm="9">
-                       <Form.Control type = "email"   placeholder="email@example.com" />
-                       </Col>
-                       </Form.Group>    
-                       <Form.Group as={Row} controlId="formPlaintextPassword">
-                       <Form.Label column sm="3">
-                           Password
-                       </Form.Label>
-                       <Col sm="9">
-                           <Form.Control type="password" placeholder="Password" />
-                       </Col>
-                       </Form.Group>
-                   </Form>
-               </Modal.Body>
-           </Modal>
-                  <BouttonPanier/>
-            </Navbar>
-       
-      </div>
-    );
-  }
+  const [pdtAjoute, setPdtAjoute] = useState([]);
 
+  const onAdd = (pdt) => {
+    const exist = pdtAjoute.find((x) => x.id === pdt.id);
 
+    if (exist) {
+      setPdtAjoute(
+        pdtAjoute.map((x) =>
+          x.id === pdt.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setPdtAjoute([...pdtAjoute, { ...pdt, qty: 1 }]);
+    }
+  };
 
+  const onRemove = (pdt) => {
+    const exist = pdtAjoute.find((x) => x.id === pdt.id);
+
+    if (exist.qty === 1) {
+      setPdtAjoute(pdtAjoute.filter((x) => x.id !== pdt.id));
+    } else {
+      setPdtAjoute(
+        pdtAjoute.map((x) =>
+          x.id === pdt.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
+
+  return (
+    <div className="Header">
+      <Navbar className="d-flex justify-content-between ">
+        <Button onClick={() => setSmShow(true)} className=" bg-warning">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            className="bi bi-person-circle"
+            viewBox="0 0 16 16"
+          >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path
+              fillRule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+            />
+          </svg>
+        </Button>
+        <Modal
+          size="sm"
+          show={smShow}
+          onHide={() => setSmShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">login</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group as={Row} controlId="formPlaintextEmail">
+                <Form.Label column sm="3">
+                  Email
+                </Form.Label>
+                <Col sm="9">
+                  <Form.Control type="email" placeholder="email@example.com" />
+                </Col>
+              </Form.Group>
+              <Form.Group as={Row} controlId="formPlaintextPassword">
+                <Form.Label column sm="3">
+                  Password
+                </Form.Label>
+                <Col sm="9">
+                  <Form.Control type="password" placeholder="Password" />
+                </Col>
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+        </Modal>
+        <Panier pdtAjoute={pdtAjoute} onAdd={onAdd} onRemove={onRemove} />
+      </Navbar>
+    </div>
+  );
+};
+
+export default Header;
