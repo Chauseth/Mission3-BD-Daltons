@@ -20,7 +20,7 @@ img {
 }
 
 .carousel-caption {
-  background-color: #0000006c;
+  background-color: #000000b6;
   border-radius: 10px;
   height: 100px;
   font-size: 12px;
@@ -47,8 +47,9 @@ img {
   width: 145px;
   border-radius: 10px;
   margin: 0 1.5%;
-  border: none;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+  border: 2px solid #f3d617 !important;
+  background: none;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
 }
 
 .card-title {
@@ -70,7 +71,8 @@ img {
 }
 
 .card-body {
-  background: rgba(0, 0, 0, 0.884);
+  background: rgba(0, 0, 0, 0.582);
+  border: none;
   /*   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; */
 }
@@ -94,11 +96,16 @@ img {
   color: white;
 }
 
+#buttonBuy:active {
+  outline: none;
+  border: none;
+}
+
 .card-footer {
-  background: rgba(0, 0, 0, 0.884);
+  background: rgba(0, 0, 0, 0.582);
   border-top: none;
-  border-bottom-left-radius: 9px !important;
-  border-bottom-right-radius: 9px !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 form input {
@@ -113,10 +120,29 @@ form input {
   margin-right: 20%;
 }
 
-.boutonPanier {
-  width: 100%;
-}
-
 .focus:hover {
   transform: scale(1.05);
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.75);
+}
+
+#logo {
+  background-color: #293133;
+  height: 70px;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.boutonPanier:active {
+  background-color: red;
+}
+
+@keyframes example {
+  0% {
+    background-color: #f3d617;
+  }
+
+  100% {
+    background-color: black;
+  }
 }

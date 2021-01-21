@@ -26,7 +26,7 @@ const BD = (props) => {
   const [lgShow, setLgShow] = useState(false);
   return (
     <>
-      <Card className="mt-5 focus">
+      <Card className="mt-5 focus border-0">
         <Card.Img
           variant="top"
           src={cleanPath}
