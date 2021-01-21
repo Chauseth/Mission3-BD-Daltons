@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import { useState } from "react";
 
-export default (props) => {
+const Header = (props) => {
   const [smShow, setSmShow] = useState(false);
   const [pdtAjoute, setPdtAjoute] = useState([]);
 
@@ -93,3 +93,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default Header;

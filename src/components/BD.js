@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { FaCartArrowDown } from "react-icons/fa";
 import { series } from "./data/series";
 import BoutonAcheter from "./boutonAcheter";
 

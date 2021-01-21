@@ -1,10 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import { tableaupanier } from "./TableauPanier";
+import Panier from "./Panier";
 
-const BoutonAcheter = () => {
+const BoutonAcheter = (props) => {
+  const buySomething = (album) => {
+    tableaupanier.push(album);
+  };
+
   return (
     <div>
-      <button>Acheter</button>
+      <button onClick={() => buySomething(props.album)}>Acheter</button>
     </div>
   );
 };
