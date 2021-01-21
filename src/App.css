@@ -80,11 +80,18 @@ img {
   background-color: #f3d617;
   color: black;
   font-size: 20px;
-  width: 60%;
   margin-left: 20%;
   margin-right: 20%;
   border-radius: 10px;
   justify-self: end;
+  font-size: 1em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#buttonBuy:hover {
+  background-color: #293133;
+  color: white;
 }
 
 .card-footer {
@@ -104,4 +111,12 @@ form input {
 .carousel-caption {
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.boutonPanier {
+  width: 100%;
+}
+
+.focus:hover {
+  transform: scale(1.05);
 }

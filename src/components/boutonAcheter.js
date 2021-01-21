@@ -10,7 +10,9 @@ const BoutonAcheter = (props) => {
 
   return (
     <div>
-      <button onClick={() => buySomething(props.album)}>Acheter</button>
+      <button onClick={() => buySomething(props.album)} id="buttonBuy">
+        Acheter
+      </button>
     </div>
   );
 };

@@ -26,7 +26,7 @@ const BD = (props) => {
   const [lgShow, setLgShow] = useState(false);
   return (
     <>
-      <Card className="mt-5">
+      <Card className="mt-5 focus">
         <Card.Img
           variant="top"
           src={cleanPath}
@@ -37,7 +37,7 @@ const BD = (props) => {
           <Card.Text>{props.prix} €</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <BoutonAcheter album={props} />
+          <BoutonAcheter album={props} className="boutonPanier" />
         </Card.Footer>
       </Card>
 
