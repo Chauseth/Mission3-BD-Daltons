@@ -5,7 +5,10 @@ import Panier from "./Panier";
 
 const BoutonAcheter = (props) => {
   const buySomething = (album) => {
-    tableaupanier.push(album);
+    const indexDoublon = tableaupanier.findIndex(
+      (album) => props.titre === tableaupanier[album].titre
+    );
+    console.log(indexDoublon);
   };
 
   return (

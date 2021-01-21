@@ -50,8 +50,7 @@ const Header = (props) => {
             height="16"
             fill="currentColor"
             className="bi bi-person-circle"
-            viewBox="0 0 16 16"
-          >
+            viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
             <path
               fillRule="evenodd"
@@ -63,8 +62,7 @@ const Header = (props) => {
           size="sm"
           show={smShow}
           onHide={() => setSmShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
+          aria-labelledby="example-modal-sizes-title-sm">
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-sm">login</Modal.Title>
           </Modal.Header>
