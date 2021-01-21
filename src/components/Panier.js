@@ -2,7 +2,7 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
-import ItemPanier from './ItemPanier'
+import ItemPanier from './ItemPanier';
 import {useState} from 'react';
 
 const Panier = (props) => {
