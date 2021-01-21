@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import { useState } from "react";
+import Logo from "../logo.svg";
 
 const Header = (props) => {
   const [smShow, setSmShow] = useState(false);
@@ -88,6 +89,8 @@ const Header = (props) => {
             </Form>
           </Modal.Body>
         </Modal>
+
+        <img id="logo" src={Logo} alt="Dalton's BD"></img>
         <Panier pdtAjoute={pdtAjoute} onAdd={onAdd} onRemove={onRemove} />
       </Navbar>
     </div>

@@ -27,7 +27,7 @@ const BD = props => {
   const [lgShow, setLgShow] = useState(false);
   return (
     <>
-      <Card className="mt-5 focus">
+      <Card className="mt-5 focus border-0">
         <Card.Img
           variant="top"
           src={cleanPath}
@@ -47,16 +47,29 @@ const BD = props => {
         show={lgShow}
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
+        className="BodyModal"
       >
         <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            {props.titre}
-          </Modal.Title>
+          <Modal.Title id="example-modal-sizes-title-lg"></Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="modalBody">
+          <h1>{props.titre}</h1>
           <img src={cleanFullPath} />
+          <p className="loremText">
+            lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            eu est urna. Duis a massa quam. Donec sed laoreet ante, at blandit
+            purus. Fusce sit amet elit nisl. Etiam sed purus mattis, molestie
+            augue non, euismod libero. Curabitur tempus nisl lacus, in tincidunt
+            lorem ultricies ut. Nullam vitae arcu in arcu lacinia vehicula ac at
+            risus.{" "}
+          </p>
+          <h5>Ajouter au panier</h5>
+          <div className="d-flex">
+            <h3>{props.prix} €</h3>
+            <BoutonAcheter album={props} className="boutonPanier" />
+          </div>
         </Modal.Body>
-        <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer>
+        {/* <Modal.Footer className="pull-left fw-bold">Total :</Modal.Footer> */}
       </Modal>
     </>
   );
