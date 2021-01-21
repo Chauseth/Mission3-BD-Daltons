@@ -6,13 +6,6 @@ import ItemPanier from "./ItemPanier";
 import { useState } from "react";
 import { tableaupanier } from "./TableauPanier";
 
-<<<<<<< HEAD
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
-import ItemPanier from './ItemPanier';
-import {useState} from 'react';
-=======
 export default (props) => {
   const [count, setCount] = useState(0);
   const { pdtAjoute, onAdd, onRemove } = props;
@@ -20,7 +13,6 @@ export default (props) => {
   const taxAjoute = prixPdt * 0.19;
   const coutLivraison = prixPdt > 50 ? 0 : 5;
   const prixTotal = prixPdt + taxAjoute + coutLivraison;
->>>>>>> 6a14279df29252cc38d1bc4fb796648e96dcba85
 
   const [lgShow, setLgShow] = useState(false);
   return (
