@@ -7,6 +7,7 @@ const BoutonAcheter = (props) => {
   const buySomething = (album) => {
     tableaupanier.push(album);
   };
+  
 
   return (
     <div>

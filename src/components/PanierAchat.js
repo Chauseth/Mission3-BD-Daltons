@@ -31,3 +31,37 @@
 //         <Panier pdtAjoute ={pdtAjoute} onAdd={onAdd} onRemove={onRemove}></Panier>
 //     )
 // }
+// {pdtAjoute.map((product) => (
+//     <div key={product.id} className="row">
+       
+//         <div className="col-2">
+//             <button  onClick={() => onRemove(product)}>
+//                 -
+//             </button>{' '}
+//             <button onClick={() => onAdd(product)}>
+//                 +
+//             </button>
+//         </div>
+//         <div className="col-2 text-right" >
+//             {product.qty} x {product.prix.toFixed(2)} €
+//         </div>
+            
+//        </div>
+//      ))}
+// {tableaupanier.map((product) => (
+//     <div key={product.id} className="row">
+    
+//         <div className="col-2">
+//             <button  onClick={() => onRemove(product)}>
+//                 -
+//             </button>{' '}
+//             <button onClick={() => onAdd(product)}>
+//                 +
+//             </button>
+//         </div>
+//         <div className="col-2 text-right" >
+//             {product.qty} x {product.prix.toFixed(2)} €
+//         </div>
+          
+//         </div>
+//       ))}
