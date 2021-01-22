@@ -18,7 +18,7 @@ const Header = (props) => {
   return (
     <div className="Header">
       <Navbar className="d-flex justify-content-between ">
-        <Button onClick={() => setSmShow(true)} className=" bg-warning">
+        <Button onClick={() => setSmShow(true)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

@@ -39,7 +39,6 @@ const Panier = (props) => {
             <tbody>
               {/* Vérification de chaque entrée du panier pour affichage du composant ItemPanier*/}
               {tableaupanier.map((index) => {
-                console.log(index);
                 return (
                   <ItemPanier
                     titre={index.titre}

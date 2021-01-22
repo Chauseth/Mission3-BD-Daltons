@@ -154,7 +154,7 @@ form input {
 /* set modal Body (Daniel) */
 .BodyModal {
   border-radius: 50px;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 .modalBody {
   display: flex;
